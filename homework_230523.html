@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>Home</li>
+        <li>Collor palette</li>
+        <li>Footer</li>
+      </ul>
+    </header>
+    <div class="colorPalette">
+      <div class="color1"></div>
+      <div class="color2"></div>
+      <div class="color3"></div>
+      <div class="color4"></div>
+    </div>
+    <footer>
+      <p>Contact</p>
+    </footer>
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+    background-color: #edeee9;
+    font-family: Artemis;
+  }
+
+  header, footer {
+    background-color: #ddd4ba;
+    width: 100%;
+    height: 80px;
+  }
+
+  header {
+    position: fixed;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0;
+    position: relative;
+    top:  40%;
+  }
+
+  .colorPalette {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 400px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  .color1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #9c4c36;
+  }
+  .color2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #33482c;
+  }
+  .color3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #30202e;
+  }
+  .color4 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ddd4ba;
+  }
+
+  p {
+    position: relative;
+    left: 50%;
+    top: 40%;
+  }
+</style>
