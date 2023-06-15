@@ -33,14 +33,43 @@ function removeItem(name) {
     for (let i = 0; i < CartItem.Cart.length; i++) {
         const item = CartItem.Cart[i].product;
         if (name === item) {
-
+            //remove CartItem.Cart[i]
         }
       }
 }
 
 //Update Items: Create a method to update the quantity of an item in the shopping cart
 
+function updateItem(name, amount) {
+    for (let i = 0; i < CartItem.Cart.length; i++) {
+        const item = CartItem.Cart[i].product;
+        if (name === item) {
+            //CartItem.Cart[i].quantity = amount;
+        }
+      }
+}
+
 //Clear Items from Cart: Implement a method that clears all items from the shopping cart
+
+function clearCart(cart) {
+    
+}
 
 /*Implement a method named applyCoupon that applies a discount to the total price of the shopping cart based on the provided coupon code.
 The following coupon codes should be supported: 'SAVE10', 'SAVE20', and 'SAVE50'*/
+
+const SAVE10 = 0.1;
+const SAVE20 = 0.2;
+const SAVE50 = 0.5;
+
+function getDiscount(coupon) {
+    let totalAmount = 0;
+
+    for (let i = 0; i < CartItem.Cart.length; i++) {
+        const item = CartItem.Cart[i];
+        const itemTotal = item.price * item.quantity;
+        totalAmount += itemTotal * coupon;
+      }
+  
+    return totalAmount;
+}
