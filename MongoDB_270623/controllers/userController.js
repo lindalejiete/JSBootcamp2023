@@ -68,3 +68,27 @@ export const updateUser = async (req, res) => {
         res.status(400).send(error);
     }
 }
+
+export const countUsers = async (req, res) => {
+    try {
+        const countedUser = userModel.where({ userName: req.body.userName }).count();
+        userModel.count({ userName: req.body.userName }).count().exec();
+        await userModel.count({ userName: req.body.userName });
+        userModel.where( userName, req.body.userName ).count();
+
+        res.status(201).send(countedUser);
+    } catch (error) {
+        console.log(error);
+        res.status(400).send(error);
+    }
+}
+
+/*
+const countQuery = model.where({ 'color': 'black' }).count();
+
+query.count({ color: 'black' }).count().exec();
+
+await query.count({ color: 'black' });
+
+query.where('color', 'black').count();
+*/
